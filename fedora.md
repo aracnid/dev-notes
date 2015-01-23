@@ -24,6 +24,8 @@ Source:  [Fedora Magazine](http://fedoramagazine.org/upgrading-to-fedora-21-work
   
 - Once the previous command completes without errors, reboot the system.  In the Boot Menu, select the "System Upgrade" menu item and press \<Enter\>.  All the appropriate packages and upgrade tasks will now be ompleted automatically, and when completed you will be able to log in to your newly upgraded workstation.
 
+- If there are errors with the upgrade, review the log file (```/var/log/fedup.log```) and troubleshoot.
+
 - Determine the new version of Fedora to confirm the successful upgrade.
 
   
