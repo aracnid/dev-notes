@@ -11,7 +11,7 @@
 - **Storage**:
   - Type: root
   - Device: /dev/sda1
-  - Size: 10 GiB
+  - Size: 8 GiB
   - Volume Type: General Purpose (SSD)
   
 - **Tags**:
