@@ -2,6 +2,11 @@ Upgrade Fedora Version
 ======================
 Source:  [Fedora Magazine](http://fedoramagazine.org/upgrading-to-fedora-21-workstation-from-fedora-20/)
 
+- Determine your current version of Fedora.
+  ```
+  uname -a
+  ```
+
 - Ensure that you have the most up-to-date version of the currently installed Fedora version.
   ```
   sudo yum update
@@ -18,6 +23,7 @@ Source:  [Fedora Magazine](http://fedoramagazine.org/upgrading-to-fedora-21-work
   ```
   
 - Once the previous command completes without errors, reboot the system.  In the Boot Menu, select the "System Upgrade" menu item and press \<Enter\>.  All the appropriate packages and upgrade tasks will now be ompleted automatically, and when completed you will be able to log in to your newly upgraded workstation.
-  
+
+- Determine the new version of Fedora to confirm the successful upgrade.
 
   
