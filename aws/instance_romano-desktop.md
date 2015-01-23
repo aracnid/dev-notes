@@ -5,7 +5,7 @@
   - Memory: 7.5 GiB
   - Instance Storage: 1 x 32 GB (SSD)
   
-- ** Configuration**:
+- **Configuration**:
   default
   
 - **Storage**:
