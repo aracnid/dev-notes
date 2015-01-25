@@ -86,7 +86,7 @@ Make EBS Volume Available
 
   ```
   device_name  mount_point  file_system_type  fs_mntops           fs_freq  fs_passno
-  /dev/xvdf    /data        ext4              defaults,nofail  0        0          2
+  /dev/xvdf    /data        ext4              defaults,nofail           0          2
   ```
 - After you've added the new entry to `/etc/fstab`, you need to check that your entry works.  Run the `mount -a` command to mount all file systems in `/etc/fstab`.  **WARNING**:  Errors in the `/etc/fstab` file can render a system unbootable.  Do not shut down a system that has errors in this file.
 
