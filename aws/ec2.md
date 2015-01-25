@@ -67,9 +67,7 @@ Make EBS Volume Available
   # file -s /dev/xvdf
   /dev/xvdf: data
   ```
-  If the output simply shows data for the device, then there is no file system on the device and you need to create one.
-
-- Type the following command to create a new file system.
+- If the output simply shows data for the device, then there is no file system on the device and you need to create one.  If you do need to create a new file system, type the following command.
 
   ```
   mkfs -t ext4 /dev/xvdf
