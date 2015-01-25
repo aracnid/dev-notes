@@ -1,7 +1,7 @@
 When creating:
 - **Type**: Magnetic
 - **Size**: 10 GiB
-- **Availability Zone**: us-east-1a
+- **Availability Zone**: us-east-1c
 - **Encryption**: romano-data-keys
 
 When attaching:
