@@ -10,6 +10,12 @@ Initial Setup (from Windows Client)
 
 - Convert the private key file from `.pem` to `.ppk`.  See [putty.md](../putty.md).
 - Connect to the EC2 instance.  See [putty.md](../putty.md).
+- Set the package updater, yum, to automatically install optional packages.  To do this you need to edit the file `/etc/yum.conf` to add the following line.
+
+  ```
+  group_package_types=default, mandatory, optional
+  ```
+  
 - Update all the packages on the system.
 
   ```
