@@ -111,11 +111,27 @@ Install the Desktop Environment
     scp -i [keyfile.pem] nomachine_4.4.6_7_x86_64.rpm centos@[publis-dns]:/home/centos
     ```
   - Download the package file from a public S3 bucket:
+
     ```
     wget http://s3.aws.amazon.com/<bucket>/<folder>/<filename.ext>
     ```
+
 - Install the NoMachine package.
 
   ```
-  sudo rpm nomachine_4.4.6_7_x86_64.rpm
-- 
+  sudo rpm -i nomachine_4.4.6_7_x86_64.rpm
+  ```
+  
+- Verify that the package was installed correctly and the service has started.
+
+  ```
+  sudo /usr/NX/bin/nxserver --status
+  ```
+
+- Add a user to the NX server.
+
+  ```
+  sudo /usr/NX/bin/nxserver --useradd <username>
+  ```
+  
+- You can now access the instance from the NoMachine client.
