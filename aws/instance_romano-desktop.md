@@ -6,7 +6,7 @@
   - Instance Storage: 1 x 32 GB (SSD)
   
 - **Configuration**:
-  default
+  - Availability Zone: us-east-1c (This must match the zone of the additional data volume to attach.)
   
 - **Storage**:
   - Type: root
@@ -19,7 +19,9 @@
   
 - **Security Group**:
   - Name: romano-desktop-group
-    - SSH: (TCP) Port 22 from Anywhere
+    - TCP: Port 22 from Anywhere (SSH)
+    - TCP: Port 4000 from Anywhere (NX)
+    - UDP: Port 4369 from Anywhere (NX)
     
 - **Key Pair**:
   - Name: romano-desktop-keys
