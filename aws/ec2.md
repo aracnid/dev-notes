@@ -101,15 +101,19 @@ Install the Desktop Environment
 - To change the default boot target to "graphical", run the following command.
 
   ```
-  ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+  sudo ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
   ```
 - Reboot, one more time.
-- Download "NoMachine for Linux - x86_64" from www.nomachine.com.
-- Transfer the file to the EC2 instance.
+- Download "NoMachine for Linux - x86_64" from www.nomachine.com.  There are many methods of getting this file, but using the instance to download directly from NoMaching may be difficult.  You can copy the file to the instance from another Linux computer or tranfer it from a public S3 bucket.
+  - Copy the package file to the EC2 instance from another Linux computer:
 
-  ```
-  scp -i [keyfile.pem] nomachine_4.4.6_7_x86_64.rpm centos@[publis-dns]:/home/centos
-  ```
+    ```
+    scp -i [keyfile.pem] nomachine_4.4.6_7_x86_64.rpm centos@[publis-dns]:/home/centos
+    ```
+  - Download the package file from a public S3 bucket:
+    ```
+    wget http://s3.aws.amazon.com/<bucket>/<folder>/<filename.ext>
+    ```
 - Install the NoMachine package.
 
   ```
