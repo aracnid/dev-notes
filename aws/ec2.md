@@ -113,7 +113,7 @@ Install the Desktop Environment
   - Download the package file from a public S3 bucket:
 
     ```
-    wget http://s3.aws.amazon.com/<bucket>/<folder>/<filename.ext>
+    wget http://s3.amazonaws.com/<bucket>/<folder>/<filename.ext>
     ```
 
 - Install the NoMachine package.
