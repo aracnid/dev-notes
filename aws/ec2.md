@@ -10,28 +10,34 @@ Initial Setup (from Windows Client)
 
 - Convert the private key file from `.pem` to `.ppk`.  See [putty.md](../putty.md).
 - Connect to the EC2 instance.  See [putty.md](../putty.md).
-- Set the package updater, yum, to automatically install optional packages.  To do this you need to edit the file `/etc/yum.conf` to add the following line.
+- Set the package updater, yum, to automatically install optional packages.  To do this you need to edit the file `/etc/yum.conf` to add the following line.  Use a text editor like `vi`.
 
   ```
-  group_package_types=default, mandatory, optional
+  group_package_types=default,mandatory,optional
   ```
   
 - Update all the packages on the system.
 
   ```
-  sudo yum -y update
+  $ sudo yum -y update
   ```
 
 - Reboot the server to take advantage of any kernel or security-relevant updates.
 
   ```
-  sudo reboot
+  $ sudo reboot
   ```
   
 - Install the following package groups.
 
   ```
-  sudo yum -y groupinstall "Base" "Development Tools"
+  $ sudo yum -y groupinstall "Base" "Development Tools"
+  ```
+
+- Install the EPEL package (Extra Packages for Enterprise Linux).
+
+  ```
+  $ sudo yum -y install epel-release
   ```
 
 - Reboot the server, again.
@@ -39,7 +45,7 @@ Initial Setup (from Windows Client)
 - Set the root password.
 
   ```
-  sudo passwd
+  $ sudo passwd
   ```
 - Add a user.
 
@@ -70,12 +76,12 @@ Make EBS Volume Available
 - If the output simply shows data for the device, then there is no file system on the device and you need to create one.  If you do need to create a new file system, type the following command.
 
   ```
-  mkfs -t ext4 /dev/xvdf
+  # mkfs -t ext4 /dev/xvdf
   ```
 - Create a mount point for the volume.  In this example, the mount point is `/data`.
 
   ```
-  mkdir /data
+  # mkdir /data
   ```
 - Mount the volume to the mount point.
 
@@ -93,45 +99,85 @@ Make EBS Volume Available
 Install the Desktop Environment
 ===============================
 
-- To install the KDE desktop environment, type the following command to install the necessary packages and dependencies.
+- To install the GNOME desktop environment, type the following command to install the necessary packages and dependencies.
 
   ```
-  sudo yum groupinstall "KDE Plasma Workspaces"
+  # yum -y groupinstall "X Window System" "GNOME Desktop"
   ```
 - To change the default boot target to "graphical", run the following command.
 
   ```
-  sudo ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+  # systemctl isolate graphical.target
+  # systemctl set-default graphical.target
   ```
-- Reboot, one more time.
+- Reboot the system.
+
+Install the Windows Remote Desktop Service
+==========================================
+
+- Install the "Nux Dextop" repository.
+
+  ```
+  # rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+  ```
+
+- Install the RDP and VNC servers.  (Note that the VNC server should already be installed.)
+
+  ```
+  # yum -y install xrdp tigervnc-server
+  ```
+
+- Start the xrdp service and enable it to start at system boot up.
+
+  ```
+  systemctl start xrdp.service
+  systemctl enable xrdp.service
+  ```
+
+- Create the iptables rule to allow rdp connection from external machines.
+
+  ```
+  # firewall-cmd --permanent --zone=public --add-port=3389/tcp
+  # firewall-cmd --reload
+  ```
+- You can now access the instance from the Windows Remote Desktop.
+
+Install NX Remote Desktop Service
+=================================
 - Download "NoMachine for Linux - x86_64" from www.nomachine.com.  There are many methods of getting this file, but using the instance to download directly from NoMaching may be difficult.  You can copy the file to the instance from another Linux computer or tranfer it from a public S3 bucket.
   - Copy the package file to the EC2 instance from another Linux computer:
 
     ```
-    scp -i [keyfile.pem] nomachine_4.4.6_7_x86_64.rpm centos@[publis-dns]:/home/centos
+    $ scp -i [keyfile.pem] nomachine_4.4.6_7_x86_64.rpm centos@[publis-dns]:/home/centos
     ```
   - Download the package file from a public S3 bucket:
 
     ```
-    wget http://s3.amazonaws.com/<bucket>/<folder>/<filename.ext>
+    $ wget http://s3.amazonaws.com/<bucket>/<folder>/<filename.ext>
     ```
 
 - Install the NoMachine package.
 
   ```
-  sudo rpm -i nomachine_4.4.6_7_x86_64.rpm
+  # rpm -i nomachine_4.4.6_7_x86_64.rpm
+  ```
+  
+- (Optional) You can combine the last 2 steps into a single command.
+
+  ```
+  # rpm -i http://s3.amazonaws.com/<bucket>/<folder>/<filename.ext>
   ```
   
 - Verify that the package was installed correctly and the service has started.
 
   ```
-  sudo /usr/NX/bin/nxserver --status
+  # /usr/NX/bin/nxserver --status
   ```
 
 - Add a user to the NX server.
 
   ```
-  sudo /usr/NX/bin/nxserver --useradd <username>
+  # /usr/NX/bin/nxserver --useradd <username>
   ```
   
 - You can now access the instance from the NoMachine client.
