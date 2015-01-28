@@ -1,3 +1,6 @@
+Install Python 3
+================
+
 - Install "XZ Tools" if they're not already installed
   ```
   $ sudo yum install xz-libs
@@ -38,3 +41,10 @@ Note that `pip` should already be installed with Python 3.4.
   $ python3 -m pip install <some-package>
   ```
 
+Useful Python Modules
+=====================
+
+## Mechanize
+(Source:  https://pypi.python.org/pypi/mechanize)
+
+Stateful progrmmatic web browsing
