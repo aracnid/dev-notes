@@ -1,9 +1,10 @@
 Install Python 3
 ================
 
-- Install "XZ Tools" if they're not already installed
+- Install "XZ Tools" and "OpenSSL Development" if they're not already installed
   ```
-  $ sudo yum install xz-libs
+  $ sudo yum -y install xz-libs
+  $ sudo yum -y install openssl-devel
   ```
 
 - Download the source archive.
@@ -25,6 +26,11 @@ Install Python 3
   $ sudo make install
   ```
 
+- Create a link so that you can easily execute `python3` using `sudo`.
+  ```
+  $ sudo ln -s /usr/local/bin/python3 /usr/bin/python3
+  ```
+
 - Verify the installation.
   ```
   $ python3 --version
@@ -34,11 +40,20 @@ Installing Python Modules
 =========================
 (Source:  https://docs.python.org/3/installing/)
 
-Note that `pip` should already be installed with Python 3.4.
+- Note that `pip` should already be installed with Python 3.4.  If not, type in the following commands
+  ```
+  $ wget https://bootstrap.pypa.io/get-pip.py
+  $ sudo python3 get-pip.py
+  ```
+
+- To upgrade `pip`, type in the following commands.
+  ```
+  $ sudo python3 -m pip install -U pip
+  ```
 
 - Basic usage:
   ```
-  $ python3 -m pip install <some-package>
+  $ sudo python3 -m pip install <some-package>
   ```
 
 Useful Python Modules
