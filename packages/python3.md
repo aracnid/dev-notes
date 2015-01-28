@@ -60,6 +60,17 @@ Useful Python Modules
 =====================
 
 ## Mechanize
-(Source:  https://pypi.python.org/pypi/mechanize)
+`mechanize`
+
+Source:  https://pypi.python.org/pypi/mechanize
 
 Stateful progrmmatic web browsing
+
+## Beautiful Soup 4
+`beautifulsoup4`
+
+Sources:  
+  - http://www.crummy.com/software/BeautifulSoup
+  - https://pypi.python.org/pypi/beautifulsoup4/4.3.2
+
+Screen-scraping library
