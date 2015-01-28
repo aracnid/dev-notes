@@ -44,10 +44,10 @@ Setup Basic Configuration
   
 - Here's a few other useful configuration commands.
   ```
-  $ git config --global log.abbrevCommit yes
+  $ git config --global log.abbrevcommit yes
   $ git config --global core.abbrev 8
-  $ git config --global color.ui auto
   $ git config --global core.editor <pick-your-favorite>
+  $ git config --global color.ui auto
   ```
   
 - To initialize a new Git repository:
