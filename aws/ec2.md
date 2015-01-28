@@ -181,3 +181,22 @@ Install NX Remote Desktop Service
   ```
   
 - You can now access the instance from the NoMachine client.
+
+Install Development Packages
+============================
+
+The following list contains other important development packages that are required to be installed to support most development efforts.
+- `xz-libs`
+- `openssl-devel`
+- `zlib-devel`
+- `libcurl-devel`
+- `expat-devel`
+- `asciidoc`
+- `xmlto`
+- `docbook2X`
+- `perl-ExtUtils-MakeMaker`
+
+Also, after installing `docbook2X`, there is an issue, specifically during `git` installation, where it's expecting a command named `docbook2x-texi`, but the actual command is named `db2x_texixml`.  Run the following command to create a symbolic link to fix this issue.
+```
+$ sudo ln -s /usr/bin/db2x_texixml /usr/bin/docbook2x-texi
+```
