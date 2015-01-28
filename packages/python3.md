@@ -27,4 +27,14 @@
   $ python3 --version
   ```
 
+Installing Python Modules
+=========================
+(Source:  https://docs.python.org/3/installing/)
+
 Note that `pip` should already be installed with Python 3.4.
+
+- Basic usage:
+  ```
+  $ python3 -m pip install <some-package>
+  ```
+
