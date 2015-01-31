@@ -32,3 +32,11 @@ Installing Node
   
 (Optional:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#enterprise-linux-and-fedora)
 
+Run a Node/Express App
+======================
+
+```
+$ node app.js
+```
+
+For which ever port the app is listening, the AWS security group and the linux firewall should be configured to allow incoming traffic.
