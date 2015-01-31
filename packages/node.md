@@ -40,3 +40,11 @@ $ node app.js
 ```
 
 For which ever port the app is listening, the AWS security group and the linux firewall should be configured to allow incoming traffic.
+
+Automatically Restart App During Development
+============================================
+
+**nodemon** wraps the Node.js application to monitor for changes in the code.  When changes are detected, it restarts the web server.
+```
+# npm install -g nodemon
+$ nodemon app.js
