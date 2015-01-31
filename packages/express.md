@@ -12,3 +12,26 @@ If that doesn't work, install the express generator.
 # npm install -g express-generator@4
 $ express --version
 ```
+
+Express Application Generator
+=============================
+Use the application generator tool, `express`, to quickly create an application skeleton.
+
+- Install it with the following command.
+  ```
+  $ npm install express-generator -g
+  ```
+  
+To Create an Express App
+========================
+
+- The following creates an Express app named _**myapp**_ in the current working directory.
+  ```
+  $ express myapp
+  ```
+
+- Then install dependencies and run the app.
+  ```
+  $ cd myapp
+  $ npm install
+  $ DEBUG=myapp ./bin/www
