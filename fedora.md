@@ -19,6 +19,29 @@ Install Fedora
   $ sudo yum -y install asciidoc xmlto docbook2X
   ```
 
+Setup Typical Development Environment
+=====================================
+
+## Install Google Chrome
+- Enable the Google Yum Repository
+  ```
+  $ su -
+  # cat << EOF > /etc/yum.repos.d/google-chrome.repo
+  [google-chrome]
+  name=google-chrome - \$basearch
+  baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+  enabled=1
+  gpgcheck=1
+  gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+  EOF
+  ```
+
+- Install the package
+  ```
+  $ sudo yum -y install google-chrome-stable
+  ```
+
+
 Upgrade Fedora Version
 ======================
 Source:  [Fedora Magazine](http://fedoramagazine.org/upgrading-to-fedora-21-workstation-from-fedora-20/)
