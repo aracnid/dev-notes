@@ -1,3 +1,14 @@
+Install Fedora
+==============
+- Download a Live image from https://getfedora.org
+- To write the image to an SD card, insert the SD card and type the following commands.  Note that it will take several minutes to write the image to the SD card.  Be patient.
+  ```
+  $ dmesg|tail; # to determine the device node mapping assigned to the SD card, look for the latest device
+  $ sudo dd if=/path/file.iso of=/dev/sdd
+  ```
+  
+- Boot from the SD card.
+
 Upgrade Fedora Version
 ======================
 Source:  [Fedora Magazine](http://fedoramagazine.org/upgrading-to-fedora-21-workstation-from-fedora-20/)
