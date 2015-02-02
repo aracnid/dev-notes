@@ -7,7 +7,17 @@ Install Fedora
   $ sudo dd if=/path/file.iso of=/dev/sdd
   ```
   
-- Boot from the SD card.
+- Boot from the SD card and follow the instructions.
+- Update all the installed packages
+  ```
+  sudo yum update
+  ```
+  
+- Reboot.
+- (Optional) Install additional development packages.
+  ```
+  $ sudo yum -y install asciidoc xmlto docbook2X
+  ```
 
 Upgrade Fedora Version
 ======================
