@@ -58,7 +58,7 @@
   ```
   Uncheck the option ```LXPolKit```.
 
-4. Install Chromium
+6. Install Chromium
 
   ```
   $ wget -qO - http://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
@@ -68,7 +68,7 @@
   $ sudo apt-get -y install ttf-mscorefonts-installer unclutter
   ```
 
-5. Setup Chromium to auto start
+7. Setup Chromium to auto start
 
   Add the following lines to the end of the file ```~/.config/lxsession/LXDE-pi/autostart```.
 
@@ -79,8 +79,42 @@
   @chromium-browser --noerrdialogs --disable-session-crashed-bubble --disable-infobars --kiosk http://www.website.com
   ```
 
-5. Install LAMP Stack
+8. Install LAMP Stack
 
   ```
   $ sudo apt-get -y install apache2 php5 mysql-client mysql-server php5-mysql phpmyadmin
+  ```
+
+9. Update MySQL to accept remote connections
+
+  ```
+  $ sudo nano /etc/mysql/my.cnf
+  ```
+  
+	Comment out the line "bind-address=localhost"
+
+  Restart the MySQL Server
+  
+  ```
+  $ sudo /etc/init.d/mysql restart
+  ```
+  
+  Add remote user
+
+  ```
+  $ mysql -u root -p
+
+  mysql> create user 'jason'@'%' identified by 'remotebeer';
+  mysql> grant all privileges on *.* to 'jason'@'%' with grant option;
+
+  mysql> grant all privileges on labDB.* to 'beers'@'192.168.1.251' identified by 'restonbeer';
+  ```
+
+10. Add required Python modules
+
+  ```
+  $ sudo pip3 install peewee
+  $ sudo pip3 install hjson
+  $ sudo pip3 install py-trello
+  $ sudo pip3 install pymysql
   ```
