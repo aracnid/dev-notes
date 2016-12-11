@@ -33,3 +33,19 @@
 - Simple Mind Pro
 - Steam
 - WinSCP
+
+# Start Menu
+
+Today:
+Cal, Weather, Calc, Paint
+
+Applications:
+Word, Excel, PowerPoint, Acrobat
+Project, Publisher, Access, Quicken
+
+Dev:
+Python, GitBash, Disk Imager, WinSCP
+VNC Viewer, Putty
+
+Utilities:
+Action
