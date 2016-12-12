@@ -17,6 +17,7 @@
 - MS Office
 - Minecraft
 - Mirillis Action
+- MongoDB
 - Movie Maker
 - MPC-HC x64
 - NotePad++
