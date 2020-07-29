@@ -7,3 +7,14 @@ From Pop!_Shop:
 - Marker
 - Mark Text
 - Slack
+
+## Gnome Extensions
+
+TBD
+
+## Command Line Settings
+
+To set the Alt-Tab behavior to switch between apps only in the current workspace
+```shell
+$ gsettings set org.gnome.shell.app-switcher current-workspace-only true
+```
