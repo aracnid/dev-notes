@@ -1,41 +1,36 @@
-Installing/Upgrading Git
-========================
+# Common Instructions
 
-- Git should already be loaded in your linux distribution.  If not, you can install it using `yum`.
-  ```
-  $ sudo yum -y install git
-  ```
-  
 - To check your version, type the following command.
   ```
   $ git --version
   ```
   
-- The version of Git installed through the package repository may not be the latest version available.  To upgrade to the latest version, run the following commands after you follow the steps in "Setup Basic Configuration".
-
-- The packages `zlib-devel, openssl-devel, libcurl-devel, expat-devel, asciidoc, xmlto, docbook2X, perl-ExtUtils-MakeMaker` should be installed.  Also, I encountered a strange error where, during the make process, it couldn't find `docbook2x-texi`, even after installing the `docbook2X` package.  Upon further investivation, it looked like the command file name was actually `db2x_texixml`.  To solve this issue, I created a symbolic link.
-    ```
-    $ sudo ln -s /usr/bin/db2x_texixml /usr/bin/docbook2x-texi
-    ```
-
-- In a top-leve Git repository, clone the latest Git source files from GitHub.
+- In a top-level Git repository, clone the latest Git source files from GitHub.
   ```
-  $ git clone https://github.com/git/git
+  $ git clone https://github.com/<home>/<repo>.git
+  ```
+
+- To rename "master" branch to "main"
+  ```
+  $ git branch -m master main
+  $ git push -u <upstream> main
+  $ git push <upstream> --delete master
+  $ git remote set-head <upstream> -a
   ```
   
-- Build and install Git from the source files.
+  You may need to prune the upstream branches
   ```
-  $ cd git
-  $ make configure
-  $ ./configure --prefix=/usr
-  $ make all doc info
-  $ sudo make install install-doc install-html
+  $ git remote prune <upstream>
   ```
-  
-- Now verify that the version has been updated.
 
-Setup Basic Configuration
-=========================
+- To rename "master" branch to "main" on Heroku
+  ```
+  $ git branch -m master main
+  $ heroku repo:reset -a <app>
+  $ git push <upstream> main
+  ```
+
+# Setup Basic Configuration
 
 - To set the personal identification configuration, type these commands.
   ```
@@ -60,4 +55,22 @@ Setup Basic Configuration
   ```
   $ export GIT_PS1_SHOWDIRTYSTATE=1
   $ export PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1 " (%s)"` \[\033[0m\]$ '
+  ```
+  
+# Old Instructions
+
+I don't know if or when these instructions will be applicable again.
+
+- The packages `zlib-devel, openssl-devel, libcurl-devel, expat-devel, asciidoc, xmlto, docbook2X, perl-ExtUtils-MakeMaker` should be installed.  Also, I encountered a strange error where, during the make process, it couldn't find `docbook2x-texi`, even after installing the `docbook2X` package.  Upon further investivation, it looked like the command file name was actually `db2x_texixml`.  To solve this issue, I created a symbolic link.
+    ```
+    $ sudo ln -s /usr/bin/db2x_texixml /usr/bin/docbook2x-texi
+    ```
+
+- Build and install Git from the source files.
+  ```
+  $ cd git
+  $ make configure
+  $ ./configure --prefix=/usr
+  $ make all doc info
+  $ sudo make install install-doc install-html
   ```
