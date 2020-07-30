@@ -54,8 +54,9 @@
 - To update the bash prompt:
   ```
   $ export GIT_PS1_SHOWDIRTYSTATE=1
-  $ export PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1 " (%s)"` \[\033[0m\]$ '
+  $ export PS1='${debian_chroot:+($debian_chroot)}[\[\033[01;33m\]\w\[\033[36m\]$(__git_ps1 " (%s)")\[\033[0m\]]\$ '
   ```
+
   
 # Old Instructions
 
