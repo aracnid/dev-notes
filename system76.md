@@ -2,6 +2,10 @@
 
 ## Installed Apps
 
+Manually Installed
+- libdrm-dev: 
+- DisplayLink: direct download
+
 From Pop!_Shop:
 - Sublime Text
 - Marker
