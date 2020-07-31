@@ -9,6 +9,11 @@
   ```
   $ git clone https://github.com/<home>/<repo>.git
   ```
+  
+- To clone a repository and specify the name of the remote
+  ```
+  $ git clone -o <remote-name> <url>
+  ```
 
 - To rename "master" branch to "main"
   ```
