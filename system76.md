@@ -5,6 +5,7 @@
 Manually Installed
 - libdrm-dev: 
 - DisplayLink: direct download
+- python-is-python3
 
 From Pop!_Shop:
 - Sublime Text
