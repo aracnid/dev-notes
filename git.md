@@ -34,6 +34,11 @@
   $ heroku repo:reset -a <app>
   $ git push <upstream> main
   ```
+  
+- To stop tracking a file, add it to `.gitignore` and run the following command:
+  ```
+  $ git rm --cached <file>
+  ```
 
 # Setup Basic Configuration
 
