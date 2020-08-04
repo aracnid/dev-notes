@@ -23,3 +23,9 @@ To set the Alt-Tab behavior to switch between apps only in the current workspace
 ```shell
 $ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 ```
+
+To stop network printer discovery, set the directive `BrowseProtocols none` in "/etc/cups/cups-browsed.conf". Then, restart the services.
+```shell
+$ service cups-browsed restart
+$ service cups restart
+```
