@@ -15,6 +15,14 @@ From Pop!_Shop:
 - Mark Text
 - Slack
 
+Install Snap:
+```
+$ sudo apt-get update
+$ sudo apt-get install snapd
+$ sudo snap install hello-world
+$ hello-world
+```
+
 ## Gnome Extensions
 
 TBD
