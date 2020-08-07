@@ -54,6 +54,7 @@
   $ git config --global core.abbrev 8
   $ git config --global core.editor <pick-your-favorite>
   $ git config --global color.ui auto
+  $ git config --global credential.helper cache
   ```
   
 - To initialize a new Git repository:
