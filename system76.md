@@ -6,6 +6,8 @@ Manually Installed
 - libdrm-dev: 
 - DisplayLink: direct download
 - python-is-python3
+- CloudBerry Backup: direct download
+- cifs-utils
 
 From Pop!_Shop:
 - Sublime Text
