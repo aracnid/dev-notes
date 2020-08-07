@@ -23,6 +23,11 @@ $ sudo snap install hello-world
 $ hello-world
 ```
 
+Installed from Snap:
+```
+$ sudo snap install --classic heroku
+```
+
 ## Gnome Extensions
 
 TBD
