@@ -31,3 +31,9 @@ To stop network printer discovery, set the directive `BrowseProtocols none` in "
 $ service cups-browsed restart
 $ service cups restart
 ```
+
+To mount Drobo folders, install `cifs-utils` and run the following command. The username I used was "cloudberry".
+```
+$ sudo mount -t cifs -o username=<username> //192.168.86.33/<drobo-folder> /mnt/<folder-name>
+$ sudo mount -t cifs -o username=cloudberry //192.168.86.33/share /mnt/drobo-share
+```
