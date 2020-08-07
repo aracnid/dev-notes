@@ -2,8 +2,10 @@
 
 - Pretty-print a JSON file from the command line
   ```
-  $ python -m json.tool <file>
+  $ python -m json.tool <in-file> <out-file>
   ```
+  
+  Reference: https://docs.python.org/3/library/json.html#json-commandline
 
 ## Useful Python Modules
 
