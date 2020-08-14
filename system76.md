@@ -47,6 +47,6 @@ $ service cups restart
 
 To mount Drobo folders, install `cifs-utils` and run the following command. The username I used was "cloudberry".
 ```
-$ sudo mount -t cifs -o username=<username> //192.168.86.33/<drobo-folder> /mnt/<folder-name>
-$ sudo mount -t cifs -o username=cloudberry //192.168.86.33/share /mnt/drobo-share
+$ sudo mount -t cifs -o username=<username>,uid=jason,gid=jason //192.168.86.33/<drobo-folder> /mnt/<folder-name>
+$ sudo mount -t cifs -o username=cloudberry,uid=jason,gid=jason //192.168.86.33/backup /mnt/drobo-backup
 ```
