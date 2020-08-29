@@ -15,6 +15,11 @@
   $ git clone -o <remote-name> <url>
   ```
 
+- To setup the remote repository
+  ```
+  $ git remote add <remote_name> <url>
+  ```
+
 - To rename "master" branch to "main"
   ```
   $ git branch -m master main
