@@ -32,9 +32,13 @@ The `.env` file many contain sensitive credential data; therefore, it shouldn't 
 
 ### 5. Update main application to load environment variables
 
-If using "pipenv", opening the shell will automatically load the environment variables from the `.env` file.
+If using "pipenv", opening the shell will automatically load the environment variables from the `.env` file. If the `.env` files is modified, reload the environment variables by sourcing the file.
 
-If not, add the following lines to the main application file:
+```bash
+$ source .env
+```
+
+If not using "pipenv", the environment variables can be loaded programatically by adding the following lines to the main application file:
 
 ```python
 from dotenv import load_dotenv
