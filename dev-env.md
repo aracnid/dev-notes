@@ -23,7 +23,7 @@ $ touch .env
 
 ```bash
 # important environment variables
-export MEANING_OF_LIFE=42
+MEANING_OF_LIFE=42
 ```
 
 ### 4. Add `.env` file to `.gitignore`
@@ -32,7 +32,9 @@ The `.env` file many contain sensitive credential data; therefore, it shouldn't 
 
 ### 5. Update main application to load environment variables
 
-Add the following lines to `app.py`:
+If using "pipenv", opening the shell will automatically load the environment variables from the `.env` file.
+
+If not, add the following lines to the main application file:
 
 ```python
 from dotenv import load_dotenv
