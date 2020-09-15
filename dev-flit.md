@@ -52,3 +52,34 @@ Install the package locally in editable mode.
 ```bash
 $ flit install --symlink
 ```
+
+## Workflow
+
+Follow this workflow whenever publishing a new version.
+
+1. Set the version number in the `__init__.py` file.
+2. Commit this modification to the main branch.
+3. Set the `SOURCE_DATE_EPOCH` environment variable to support reproducible builds.
+
+```bash
+$ SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
+```
+
+4. Push the main branch to GitHub. The following example will push the "main" branch to the remote named "github".
+
+```bash
+$ git push github main
+```
+
+5. Create a version tag (e.g., "v1.0.0-alpha.1") for the last commit and push the new version tag to GitHub.
+
+```bash
+$ git tag <version>
+$ git push github --tags
+```
+
+6. Publish the code using Flit.
+
+```bash
+$ flit publish
+```
