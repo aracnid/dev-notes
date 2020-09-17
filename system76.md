@@ -2,18 +2,26 @@
 
 ## Installed Apps
 
-Manually Installed
-- libdrm-dev: 
-- DisplayLink: direct download
+From CLI:
+- libdrm-dev
 - python-is-python3
-- CloudBerry Backup: direct download
 - cifs-utils
+- gdebi (for Zoom)
+- snapd
+- hello-world (verifies Snap installation)
+
+Direct Download:
+- DisplayLink
+- CloudBerry Backup
 
 From Pop!_Shop:
 - Sublime Text
 - Marker
 - Mark Text
 - Slack
+
+From Snap:
+- Heroku CLI
 
 Install Snap:
 ```
