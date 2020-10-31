@@ -40,6 +40,14 @@ $ sudo snap install --classic heroku
 
 TBD
 
+## Update ~/.profile
+
+Add the following lines to `~/.profile`.
+```
+# to set Monday as first day of the week
+export LC_TIME=en_GB.UTF-8
+```
+
 ## Command Line Settings
 
 To set the Alt-Tab behavior to switch between apps only in the current workspace
