@@ -9,6 +9,7 @@ From CLI:
 - gdebi (for Zoom)
 - snapd
 - hello-world (verifies Snap installation)
+- gparted
 
 Direct Download:
 - DisplayLink
