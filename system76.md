@@ -37,6 +37,13 @@ Installed from Snap:
 $ sudo snap install --classic heroku
 ```
 
+Flatpak:
+The Pop Shop may show a ghost update. That would indicate that Flatpak needs to be updated.
+
+```
+$ flatpak update
+```
+
 ## Gnome Extensions
 
 TBD
