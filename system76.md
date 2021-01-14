@@ -10,6 +10,7 @@ From CLI:
 - snapd
 - hello-world (verifies Snap installation)
 - gparted
+- font-manager
 
 Direct Download:
 - DisplayLink
