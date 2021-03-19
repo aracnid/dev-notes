@@ -19,6 +19,11 @@
   ```
   $ git remote add <remote_name> <url>
   ```
+ 
+- To change the remote url
+  ```
+  $ git remote set-url <remote_name> <url>
+  ```
 
 - To rename "master" branch to "main"
   ```
