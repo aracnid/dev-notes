@@ -15,16 +15,6 @@
   $ git clone -o <remote-name> <url>
   ```
 
-- To setup the remote repository
-  ```
-  $ git remote add <remote_name> <url>
-  ```
- 
-- To change the remote url
-  ```
-  $ git remote set-url <remote_name> <url>
-  ```
-
 - To rename "master" branch to "main"
   ```
   $ git branch -m master main
@@ -33,11 +23,6 @@
   $ git remote set-head <upstream> -a
   ```
   
-  You may need to prune the upstream branches
-  ```
-  $ git remote prune <upstream>
-  ```
-
 - To rename "master" branch to "main" on Heroku
   ```
   $ git branch -m master main
@@ -48,6 +33,45 @@
 - To stop tracking a file, add it to `.gitignore` and run the following command:
   ```
   $ git rm --cached <file>
+  ```
+  
+# Working with Remotes
+
+- To setup the remote repository
+  ```
+  $ git remote add <remote_name> <url>
+  ```
+ 
+- To change the remote url
+  ```
+  $ git remote set-url <remote_name> <url>
+  ```
+
+- You may need to prune the upstream branches
+  ```
+  $ git remote prune <upstream>
+  ```
+
+- Push a local branch to a different remote branch
+  ```
+  $ git push <remote_name> <local_branch>:<remote_branch>
+  $ git push staging staging:main
+  ```
+  
+- To set a tracking branch, from the local branch
+  ```
+  $ git branch --set-upstream-to/-u <remote_name>/<remote_branch>
+  $ git branch -u staging/main
+  ```
+
+- To view tracking branches
+  ```
+  $ git branch -vv
+  ```
+  
+- To set default push to upstream tracking branch
+  ```
+  $ git config push.default upstream
   ```
 
 # Setup Basic Configuration
