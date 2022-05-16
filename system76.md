@@ -2,7 +2,60 @@
 
 ## Installed Apps
 
+### VS Code
+
+Settings might sync, but, if not, copy settings files to
+```~/.config/Code/User```
+
+#### Installed extensions
+
+- :emojisense
+- DotENG
+- Excel to Markdown table
+- Git Graph
+- Git History
+- GitHub Theme
+- GitLens -- Git supercharged
+- Jupyter
+- Jupyter Keymap
+- Jupyter Notebook Renderers
+- Markdown All in One
+- Markdown Checkboxes
+- Markdown Emoji
+- Markdown Paste
+- Markdown PDF
+- Markdown Preview Github Styling
+- Markdown Shortcuts
+- Markdown Table Prettifier
+- Markdown TOC
+- Markdown+Math
+- markdownlint
+- Medium to Markdown
+- MongoDB for VS Code
+- Path Autocomplete
+- Peacock
+- Prettier - Code formatter
+- Pylance
+- Python
+- Toggle Quotes
+- XML Tools
+
+### Insync
+
+Sync Google Drive to 
+
+```/home/jason/gdrive```
+
+### VirtualBox
+
+Default Machine Folder: /home/jason/virtual
+
 From CLI:
+
+```
+$ sudo apt install <name>
+```
+
 - libdrm-dev
 - python-is-python3
 - cifs-utils
@@ -11,16 +64,25 @@ From CLI:
 - hello-world (verifies Snap installation)
 - gparted
 - font-manager
+- deja-dup
+- htop
 
 Direct Download:
-- DisplayLink
-- CloudBerry Backup
+- MongoDB Compass
+- Signal
+- VS Code
 
 From Pop!_Shop:
-- Sublime Text
 - Marker
-- Mark Text
+- MarkText
+- Meld
 - Slack
+- Gimp
+- Discord
+- Galculator
+- Steam
+- VirtualBox
+- Insync
 
 From Snap:
 - Heroku CLI
