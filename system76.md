@@ -2,6 +2,10 @@
 
 ## Installed Apps
 
+### Google Chrome
+
+Download and run install program manually.
+
 ### VS Code
 
 Settings might sync, but, if not, copy settings files to
@@ -42,12 +46,15 @@ Settings might sync, but, if not, copy settings files to
 
 ### Insync
 
+Download installer
+https://www.insynchq.com/downloads
 Sync Google Drive to 
 
 ```/home/jason/gdrive```
 
 ### VirtualBox
 
+Download installer
 Default Machine Folder: /home/jason/virtual
 
 From CLI:
