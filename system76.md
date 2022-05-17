@@ -6,6 +6,14 @@
 
 Download and run install program manually.
 
+### VirtualBox
+
+```
+$ sudo apt install virtualbox
+```
+
+Default Machine Folder: /home/jason/virtual
+
 ### VS Code
 
 Settings might sync, but, if not, copy settings files to
@@ -52,12 +60,7 @@ Sync Google Drive to
 
 ```/home/jason/gdrive```
 
-### VirtualBox
-
-Download installer
-Default Machine Folder: /home/jason/virtual
-
-From CLI:
+### From CLI:
 
 ```
 $ sudo apt install <name>
