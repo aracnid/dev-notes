@@ -16,6 +16,8 @@ Default Machine Folder: /home/jason/virtual
 
 ### VS Code
 
+Download and install .deb
+
 Settings might sync, but, if not, copy settings files to
 ```~/.config/Code/User```
 
