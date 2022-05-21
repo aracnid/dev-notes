@@ -62,6 +62,12 @@ Sync Google Drive to
 
 ```/home/jason/gdrive```
 
+### Heroku CLI
+
+```
+$ curl https://cli-assets.heroku.com/install.sh | sh
+```
+
 ### From CLI:
 
 ```
@@ -96,21 +102,6 @@ From Pop!_Shop:
 - VirtualBox
 - Insync
 
-From Snap:
-- Heroku CLI
-
-Install Snap:
-```
-$ sudo apt-get update
-$ sudo apt-get install snapd
-$ sudo snap install hello-world
-$ hello-world
-```
-
-Installed from Snap:
-```
-$ sudo snap install --classic heroku
-```
 
 Flatpak:
 The Pop Shop may show a ghost update. That would indicate that Flatpak needs to be updated.
