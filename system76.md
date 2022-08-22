@@ -140,3 +140,8 @@ To mount Drobo folders, install `cifs-utils` and run the following command. The 
 $ sudo mount -t cifs -o username=<username>,uid=jason,gid=jason //192.168.86.33/<drobo-folder> /mnt/<folder-name>
 $ sudo mount -t cifs -o username=cloudberry,uid=jason,gid=jason //192.168.86.33/backup /mnt/drobo-backup
 ```
+
+To reset the Gnome shell when it won't let you login. Press Ctrl + Alt + F2/F3 to switch to/from the command line.
+```
+$ pkill -HUP gnome-shell
+```
