@@ -141,6 +141,11 @@ $ sudo mount -t cifs -o username=<username>,uid=jason,gid=jason //192.168.86.33/
 $ sudo mount -t cifs -o username=cloudberry,uid=jason,gid=jason //192.168.86.33/backup /mnt/drobo-backup
 ```
 
+To mount Synology drive, install `nfs-common` and run the following command.
+```
+$ sudo mount -t nfs 192.168.86.39:/volume1/shared /mnt/data-shared
+```
+
 To reset the Gnome shell when it won't let you login. Press Ctrl + Alt + F2/F3 to switch to/from the command line.
 ```
 $ pkill -HUP gnome-shell
